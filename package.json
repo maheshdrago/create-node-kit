@@ -1,16 +1,21 @@
 {
-  "name": "create-node-app",             
+  "name": "create-node-kit",
   "version": "1.0.0",
   "description": "CLI to bootstrap a Node.js app quickly",
   "bin": {
-    "create-node-app": "./bin/index.js"
+    "create-node-kit": "./bin/index.js"
   },
   "type": "module",
   "files": [
     "bin",
     "templates"
   ],
-  "keywords": ["cli", "node", "boilerplate", "starter"],
+  "keywords": [
+    "cli",
+    "node",
+    "boilerplate",
+    "starter"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
