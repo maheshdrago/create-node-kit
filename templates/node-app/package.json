@@ -1,0 +1,32 @@
+{
+  "name": "create-node-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon",
+    "build": "tsc -b",
+    "run": "npm ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.2",
+    "@types/nodemon": "^1.19.6",
+    "cors": "^2.8.5",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "experss": "^0.0.1-security",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "tsc": "^2.0.4",
+    "type": "^2.7.3",
+    "typescript": "^5.9.3"
+  }
+}
