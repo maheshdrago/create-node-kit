@@ -4,6 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/create-node-kit.svg)](https://www.npmjs.com/package/create-node-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<img width="1072" height="518" alt="node app" src="https://github.com/user-attachments/assets/9fa4a10d-f8d3-4868-ad69-42787536ac02" />
 
 ## ✨ Features
 
