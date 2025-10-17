@@ -307,7 +307,7 @@ Inspired by popular scaffolding tools:
 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/maheshdrago/create-node-kit/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/maheshdrago/create-node-kit/discussions)
-- 📧 **Email**: [maheshdrago@example.com](mailto:maheshdrago@gmail.com)
+- 📧 **Email**: [maheshdrago@gmail.com](mailto:maheshdrago@gmail.com)
 
 ## 🗺️ Roadmap
 
