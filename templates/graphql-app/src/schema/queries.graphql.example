@@ -1,0 +1,47 @@
+# Example GraphQL Queries
+
+# Get all users
+query GetAllUsers {
+  users {
+    id
+    name
+    email
+    createdAt
+  }
+}
+
+# Get single user
+query GetUser {
+  user(id: "1") {
+    id
+    name
+    email
+  }
+}
+
+# Create user
+mutation CreateUser {
+  createUser(name: "Alice Johnson", email: "alice@example.com") {
+    id
+    name
+    email
+    createdAt
+  }
+}
+
+# Update user
+mutation UpdateUser {
+  updateUser(id: "1", name: "John Updated") {
+    id
+    name
+    email
+  }
+}
+
+# Delete user
+mutation DeleteUser {
+  deleteUser(id: "1") {
+    success
+    message
+  }
+}
