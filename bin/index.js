@@ -5,10 +5,11 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 import figlet from "figlet";
 import ora from "ora";
-import { execSync } from "child_process";
+import { exec, execSync } from "child_process";
 import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
+import { cwd } from "process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -76,6 +77,26 @@ const TEMPLATES = {
   },
 };
 
+function detectPackageManagers() {
+  let packageManagers = [];
+
+  try {
+    execSync("npm --version", { stdio: "ignore" });
+    packageManagers.push("npm");
+  } catch (e) {}
+
+  try {
+    execSync("yarn --version", { stdio: "ignore" });
+    packageManagers.push("yarn");
+  } catch (e) {}
+
+  try {
+    execSync("pnpm --version", { stdio: "ignore" });
+    packageManagers.push("pnpm");
+  } catch (e) {}
+
+  return packageManagers;
+}
 program
   .version("1.0.0")
   .argument("[project-name]", "Name of the project")
@@ -104,6 +125,12 @@ program
 
 async function collectProjectInfo(projectName, options) {
   const questions = [];
+  const packageManagers = detectPackageManagers();
+
+  if (packageManagers.length == 0) {
+    console.log("Error !! No node package manager found!!");
+    process.exit();
+  }
 
   // Project name
   if (!projectName) {
@@ -140,11 +167,9 @@ async function collectProjectInfo(projectName, options) {
       type: "list",
       name: "packageManager",
       message: "Choose a package manager:",
-      choices: [
-        { name: "npm", value: "npm" },
-        { name: "yarn", value: "yarn" },
-        { name: "pnpm", value: "pnpm" },
-      ],
+      choices: packageManagers.map((pm) => {
+        return { name: pm, value: pm };
+      }),
       default: "npm",
     });
   }

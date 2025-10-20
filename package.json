@@ -1,6 +1,6 @@
 {
   "name": "create-node-kit",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A powerful Node.js project scaffolding tool with multiple templates",
   "type": "module",
   "main": "index.js",
